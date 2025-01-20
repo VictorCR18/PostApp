@@ -40,7 +40,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MainScreen() {
     // Estado para controlar qual aba está selecionada (0 para "Usuários", 1 para "Posts")
-    var selectedTab by remember { mutableStateOf(0) }
+    var selectedTab by remember { mutableIntStateOf(0) }
 
     // Scaffold é um layout que fornece uma estrutura básica para a tela, com barra superior e inferior
     Scaffold(
@@ -50,7 +50,7 @@ fun MainScreen() {
                 title = {
                     Row ( verticalAlignment = Alignment.CenterVertically ) {
                         Image(
-                            painter = painterResource(id = R.drawable.icon512),
+                            painter = painterResource(id = R.drawable.icon),
                             contentDescription = "App Logo",
                             modifier = Modifier
                                 .size(50.dp)
